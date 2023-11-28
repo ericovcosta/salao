@@ -7,34 +7,42 @@
 }
 :root{
     font-family: 'Poppins', sans-serif;
+    position: relative;
+
 }
-.show{
-    visibility: hidden;
+.hide{
+    display: none;
 }
-section#menu{
+header{
     width: 414px;
     height: 896px;
     margin: auto;
     visibility: visible;
+    position: relative;
+    z-index: 1;
 }
-section#menu {
+header div#menu {
     color: var(--Dark, #0F241D);
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
 }
-section#menu div#close{
+header div.btn_menu{
     color: var(--Close, #69B99D);
     text-align: right;
-    margin-right: 24px;
-    margin-top: 24px;
-    margin-bottom: 90px;
+    margin-right: 2rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 4rem;
 }
-section#menu  ul{
+header ul{
     list-style: none;
 }
-section#menu ul > li{
-    margin-bottom: 99px;
+header ul > li{
+    margin-bottom: 4rem;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
 }
