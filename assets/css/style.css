@@ -6,9 +6,12 @@
     box-sizing: border-box;
 }
 :root{
+    --cor-principal : #69B99D;
+    --cor-dark : #030f0b;
+}
+body{
     font-family: 'Poppins', sans-serif;
     position: relative;
-
 }
 .hide{
     display: none;
@@ -22,7 +25,9 @@ header{
     z-index: 1;
 }
 header div#menu {
-    color: var(--Dark, #0F241D);
+    /* display: grid;
+    gap: 4rem; */
+    color: var(--Dark, var(--cor-dark));
     text-align: center;
     font-size: 2rem;
     font-style: normal;
@@ -30,19 +35,48 @@ header div#menu {
     line-height: normal; 
 }
 header div.btn_menu{
-    color: var(--Close, #69B99D);
+    color: var(--Close, var(--cor-principal));
     text-align: right;
     margin-right: 2rem;
     /* margin-top: 2rem; */
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
 }
 header ul{
     list-style: none;
-}
-header ul > li{
-    margin-bottom: 4rem;
+    display: grid;
+    gap: 4rem;
 }
 .flex{
     display: flex;
     justify-content: space-between;
+}
+.logo{
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+@media only screen and (min-width : 700px)   {
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header{
+        width: 700px;
+    }
+    header div#menu {
+        display: flex;
+        justify-content: space-around;
+        color: var(--Dark, var(--cor-dark));
+        font-size: 1rem;
+    }
+    header ul{
+        width: 550px;
+        display: flex;
+        gap : 0px;
+        justify-content: space-around;
+        /* font-size: 1rem; */
+    }
+    header div.btn_menu{
+        display: none;
+    }
 }
